@@ -1,3 +1,10 @@
 <?xml version="1.0"?>
 <robot name="bipedalWalker">
+    <launch name="waist">
+        <inertial>
+            <origin />
+            <mass />
+            <intertia />
+        </inertial>  
+    </launch>
 </robot>
