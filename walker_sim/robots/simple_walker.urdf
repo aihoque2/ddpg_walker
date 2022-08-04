@@ -2,9 +2,14 @@
 <robot name="bipedalWalker">
     <launch name="waist">
         <inertial>
-            <origin />
-            <mass />
-            <intertia />
+            <origin xyz="-1.286E-17 -0.0066341 0.024451" rpy="0 0 0"/>
+            <mass value="0.36416"/>
+            <intertia ixx="0.00112359552578825"
+        ixy="1.205946380074E-19"
+        ixz="1.11224090733735E-20"
+        iyy="0.00100247284891324"
+        iyz="0.000103236065171984"
+        izz="0.0019309628828681"/>
         </inertial>  
     </launch>
 </robot>
