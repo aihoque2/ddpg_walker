@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot name="bipedalWalker">
-    <launch name="waist">
+    <link name="waist">
         <inertial>
             <origin xyz="-1.286E-17 -0.0066341 0.024451" rpy="0 0 0"/>
             <mass value="0.36416"/>
@@ -11,5 +11,7 @@
         iyz="0.000103236065171984"
         izz="0.0019309628828681"/>
         </inertial>  
-    </launch>
+    </link>
 </robot>
+
+
