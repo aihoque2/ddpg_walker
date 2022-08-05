@@ -1,3 +1,10 @@
 <launch>
 <arg name="show_rviz" default="true"/>
+
+<include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="paused" value="true"/>
+</include>
+
+<!-- there exists a node in gazebo called spawn_model. use it here-->
+<node name="" pkg="" type="" />
 </launch>
