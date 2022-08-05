@@ -1,0 +1,3 @@
+<launch>
+<arg name="show_rviz" default="true"/>
+</launch>
