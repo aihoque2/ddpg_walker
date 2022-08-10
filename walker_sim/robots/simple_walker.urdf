@@ -12,6 +12,9 @@
         izz="0.0019309628828681"/>
         </inertial>  
     </link>
+
+    <link>
+    </link>
 </robot>
 
 

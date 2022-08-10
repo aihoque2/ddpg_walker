@@ -1,10 +1,31 @@
 <launch>
 <arg name="show_rviz" default="true"/>
 
+<!-- position -->
+<arg name="x" default="0"/>
+<arg name="y" default="0"/>
+<arg name="z" default="0"/>
+
+<!--orientaion-->
+<arg name="roll" default="0" />
+<arg name="pitch" deafult="0" />
+<arg name="yaw" default="0" />
+
 <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="paused" value="true"/>
 </include>
 
 <!-- there exists a node in gazebo called spawn_model. use it here-->
-<node name="" pkg="" type="" />
+<node name="walker_spawn" pkg="gazebo_ros" type="spawn_model" output="screen">
+    <param name="robot_description"  textfile='$(find walker_gazebo)/robots/simple_walker.urdf'  />
+    
+    <arg name="model" value="walker" />
+    <arg name="x" value="$(arg x)" />
+    <arg name="y" value="$(arg y)" />
+    <arg name="z" value="$(arg z)" />
+
+    <arg name="R" value="$(arg roll)" />
+    <arg name="P" value="$(arg pitch)" />
+    <arg name="Y" value="$(arg yaw)" />
+<node />
 </launch>
