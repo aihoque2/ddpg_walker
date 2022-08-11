@@ -10,11 +10,28 @@
         iyy="0.00100247284891324"
         iyz="0.000103236065171984"
         izz="0.0019309628828681"/>
-        </inertial>  
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" 
+            rpy="1.5707963267949 0 0"/>
+            <geometry>
+            <mesh filename="package://walker_sim/meshes/waist_L.STL" />
+            </geometry>
+            <material name="black">
+                <color rgba="0.79216 0.81961 0.93333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="1.5707963267949 0 0" />
+            <geometry>
+                <mesh filename="package://walker_sim/meshes/waist_L.STL" />
+            </geometry>
+        </collision>
     </link>
-
-    <link>
-    </link>
+    
+    <gazebo reference="waist">
+       <material>Gazebo/Red</material>
+    </gazebo>
 </robot>
 
 
