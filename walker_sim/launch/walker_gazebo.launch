@@ -20,6 +20,6 @@
 
 <!-- there exists a node in gazebo called spawn_model. use it here-->
   <node name="walker_spawn" pkg="gazebo_ros" type="spawn_model" output="screen" 
-    args="-urdf -param robot_description -model bipedalWalker -x $(arg x) -y $(arg y) -z $(arg z)
+    args="-urdf -param robot_description -model walker -x $(arg x) -y $(arg y) -z $(arg z)
               -R $(arg roll) -P $(arg pitch) -Y $(arg yaw)" />
 </launch>
