@@ -438,19 +438,19 @@
   </link>
 
   <gazebo reference="waist">
-       <material>Gazebo/Red</material>
+       <material>Gazebo/Turquoise</material>
     </gazebo>
     <gazebo reference="thighR">
-       <material>Gazebo/Blue</material>
+       <material>Gazebo/White</material>
     </gazebo>
       <gazebo reference="thighL">
-       <material>Gazebo/Blue</material>
+       <material>Gazebo/White</material>
     </gazebo>
       <gazebo reference="shankR">
-       <material>Gazebo/Red</material>
+       <material>Gazebo/White</material>
     </gazebo>
       <gazebo reference="shankL">
-       <material>Gazebo/Red</material>
+       <material>Gazebo/White</material>
     </gazebo>
       <gazebo reference="footR">
        <material>Gazebo/Black</material>
