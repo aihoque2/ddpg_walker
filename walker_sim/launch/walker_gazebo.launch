@@ -11,15 +11,26 @@
 <arg name="pitch" default="0" />
 <arg name="yaw" default="0" />
 
+<env name="GAZEBO_RESOURCE_PATH" value="$GAZEBO_RESOURCE_PATH:$(find walker_sim)/media/gazebo.material" />
+
 <param name="robot_description" textfile='$(find walker_sim)/robots/simple_walker.urdf'/>
 
 <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="paused" value="true"/>
 </include>
 
-
 <!-- there exists a node in gazebo called spawn_model. use it here-->
-  <node name="walker_spawn" pkg="gazebo_ros" type="spawn_model" output="screen" 
+<node name="walker_spawn" pkg="gazebo_ros" type="spawn_model" output="screen" 
     args="-urdf -param robot_description -model walker -x $(arg x) -y $(arg y) -z $(arg z)
               -R $(arg roll) -P $(arg pitch) -Y $(arg yaw)" />
+
+<!-- control stuff-->
+<rosparam file="$(find walker_sim)/config/joint_position_control.yaml" command="load"/>
+
+<node name="walker_controller_node" pkg="controller_manager" type="spawner" args="joint_state_controller waist_thighR_position_controller waist_thighL_position_controller thighR_shankR_position_controller thighL_shankL_position_controller" />
+
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen"/>
+    
+
 </launch>
+

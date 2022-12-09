@@ -9,11 +9,11 @@ class JointPub(object):
         self.publishers_array = []
 
         #our different joint publishers
-        self.pub_hipR = rospy.Publisher('/walker/waist_thighR_position_controller/command', Float64, queue_size=1)
-        self.pub_hipL = rospy.Publisher('/walker/waist_thighL_position_controller/command', Float64, queue_size=1)
+        self.pub_hipR = rospy.Publisher('/waist_thighR_position_controller/command', Float64, queue_size=1)
+        self.pub_hipL = rospy.Publisher('/waist_thighL_position_controller/command', Float64, queue_size=1)
         
-        self.pub_kneeR = rospy.Publisher('/walker/thighR_shankR_position_controller/command', Float64, queue_size=1)
-        self.pub_kneeL = rospy.Publisher('/walker/thighL_shankL_position_controller/command', Float64, queue_size=1)
+        self.pub_kneeR = rospy.Publisher('/thighR_shankR_position_controller/command', Float64, queue_size=1)
+        self.pub_kneeL = rospy.Publisher('/thighL_shankL_position_controller/command', Float64, queue_size=1)
 
         #publishers_array is a 2D list that holds each of our publishers
         self.publishers_array.append(self.pub_hipR)
