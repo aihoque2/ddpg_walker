@@ -474,6 +474,7 @@
 
   <gazebo>
   <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+    <robotNamespace>/walker</robotNamespace>
   </plugin>
   </gazebo>
 
@@ -489,6 +490,7 @@
     <plugin name="gazebo_ros_bumper_controller_1" filename="libgazebo_ros_bumper.so">
       <bumperTopicName>/footR_contact_sensor_state</bumperTopicName>
       <frameName>footR</frameName>
+      <robotNamespace>/walker</robotNamespace>
     </plugin>
   </sensor>
 </gazebo>
@@ -502,6 +504,7 @@
     <plugin name="gazebo_ros_bumper_controller" filename="libgazebo_ros_bumper.so">
       <bumperTopicName>/footL_contact_sensor_state</bumperTopicName>
       <frameName>footL</frameName>
+      <robotNamespace>/walker</robotNamespace>
     </plugin>
   </sensor>
 </gazebo>
